@@ -1,6 +1,4 @@
 <?php
-use mysqli;
-
 class DbConnection
 {
 

@@ -5,32 +5,14 @@ use PHPUnit\Framework\TestCase;
 require __DIR__ . "/../app/sma/Calc.php";
 require __DIR__ . "/../app/Calcu.php";
 require __DIR__ . "/../app/controllers/BookController.php";
-// require __DIR__ . "/../app/model/DBConn.php";
 
 class BookingTest extends TestCase
 {
-    // public function testAdd(){
-    //      $calc = new App\Calc;
-    //      $res = $calc->addd(1,1);
-
-    //      $this->assertEquals(2, $res);
-    // }
-
-    // public function testAddd(){
-    //      $calc = new Appp\Calcu;
-    //      $res = $calc->addd(1,3);
-
-    //      $this->assertEquals(4, $res);
-    // }
     public function getController()
     {
         return new BookingsInitName\Bookings;
     }
 
-
-    /**
-     * @group addBooking
-     */
     public function testShouldReturnTheBookingDetails()
     {
         $bookingController = $this->getController();

@@ -10,16 +10,12 @@ $currAmount = $_SESSION['acc_balance'];
 $price = 100;
 $bookingId = $_GET['id'];
 
-$res->payBooking($userId, $amountToPay, $currAmount, $price, $bookingId);
+$result = $res->payBooking($userId, $amountToPay, $currAmount, $price, $bookingId);
 
-if($res){
+if (!$result) {
      header('location: ../pages.php?page=mybooking');
      exit();
 } else {
      header('location: ../pages.php?page=mybooking');
      exit();
 }
-
-
-
-$num = 1;
